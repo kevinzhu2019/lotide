@@ -24,7 +24,7 @@ const assertArraysEqual = function(array1, array2) {
     }
     
   }
-}
+};
 
 // TEST CODE
 // assertEqual("Lighthouse Labs", "Bootcamp");
