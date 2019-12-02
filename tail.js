@@ -1,29 +1,30 @@
 // FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-  if (actual.length === expected.length) {
+const assertEqual = function(tail, expected) {
+  if (tail.length === expected.length) {
     let swi = true;
-    for (let j = 0; j < actual.length; j ++) {
-      if (actual[j] !== expected[j]) {
+    for (let j = 0; j < tail.length; j ++) {
+      if (tail[j] !== expected[j]) {
         swi = false;
       }
     }
     if (swi === true) {
-      console.log(`✅✅✅Assersion Passed: ${actual} === ${expected}`);
+      console.log(`✅✅✅Assersion Passed: ${tail} === ${expected}`);
     } else {
-      console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
+      console.log(`🛑🛑🛑Assertion Failed: ${tail} !== ${expected}`);
     }
   } else {
-    console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
+    console.log(`🛑🛑🛑Assertion Failed: ${tail} !== ${expected}`);
   }
 };
+// const assertEqual = require('./assertEqual');
 
-const tail = function(tailArray) {
-  let tempArray = [];
-  for (let i = 1; i < tailArray.length; i ++) {
-    tempArray.push(tailArray[i]);
-  }
-  return tempArray;
-};
+// const tail = function(tailArray) {
+//   let tempArray = [];
+//   for (let i = 1; i < tailArray.length; i ++) {
+//     tempArray.push(tailArray[i]);
+//   }
+//   return tempArray;
+// };
 
 // TEST CODE
 /*assertEqual("Lighthouse Labs", "Bootcamp");
@@ -34,5 +35,5 @@ assertEqual(1, 2);
 //const result = tail(["Hello", "Lighthouse", "Labs"]);
 //assertEqual(result, ["Lighthouse", "Labs"]); // => will always fail!
 
-const result = tail(["Hello", "Lighthouse", "Labs", "aaa", "bbb"]);
-assertEqual(result, ["Lighthouse", "Labs", "aaa", "bbb"]);
+// module.exports = tail;
+module.exports = assertEqual;
