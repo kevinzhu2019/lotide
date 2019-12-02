@@ -8,10 +8,9 @@ const assertEqual = function(actual, expected) {
 };
 
 // TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual("hello", "hello");
-assertEqual(1, 2);
+//Mode the test code to assertEqualTest.js
+
+module.exports = assertEqual;
 
 //🛑🛑🛑 Assertion Failed: "Lighthouse Labs" !== "Bootcamp"
 //✅✅✅ Assertion Passed: 1 === 1
