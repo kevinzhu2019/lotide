@@ -1,21 +1,23 @@
-const assertArraysEqual = function(array1, array2) {
-  if (array1.length !== array2.length) {
-    console.log("These 2 arrays are different.");
-  } else {
-    let flagSwitch = true;
-    for (let i = 0; i < array1.length; i ++) {
-      if (array1[i] !== array2[i]) {
-        flagSwitch = false;
-      }
-    }
-    if (flagSwitch === true) {
-      console.log("These 2 arrays are identical");
-    } else {
-      console.log("These 2 arrays are different.");
-    }
+// const assertArraysEqual = function(array1, array2) {
+//   if (array1.length !== array2.length) {
+//     console.log("These 2 arrays are different.");
+//   } else {
+//     let flagSwitch = true;
+//     for (let i = 0; i < array1.length; i ++) {
+//       if (array1[i] !== array2[i]) {
+//         flagSwitch = false;
+//       }
+//     }
+//     if (flagSwitch === true) {
+//       console.log("These 2 arrays are identical");
+//     } else {
+//       console.log("These 2 arrays are different.");
+//     }
     
-  }
-};
+//   }
+// };
+
+const assertArraysEqual = require('./assertArraysEqual');
 
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
@@ -46,9 +48,6 @@ const middle = function(array) {
     return midArray;
   }
 };
-// middle([1, 2, 3, 4, 5, 6, 7]);
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
-// console.log(middle([1, 2, 3, 4, 5, 6, 7]))
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6, 7]), [4]);
-assertArraysEqual(middle([1, 2]), []);
-assertArraysEqual(middle([1]), []);
+
+module.exports = middle;
+
