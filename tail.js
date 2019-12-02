@@ -16,6 +16,16 @@ const assertEqual = function(tail, expected) {
     console.log(`🛑🛑🛑Assertion Failed: ${tail} !== ${expected}`);
   }
 };
+
+const tail = function(tailArray) {
+  let tempArray = [];
+  for (let i = 1; i < tailArray.length; i ++) {
+    tempArray.push(tailArray[i]);
+  }
+  return tempArray;
+};
+
+console.log(tail(['Hello', 'Lighthouse', 'Labs', 'aaa', 'bbb']));
 // const assertEqual = require('./assertEqual');
 
 // const tail = function(tailArray) {
@@ -36,4 +46,4 @@ assertEqual(1, 2);
 //assertEqual(result, ["Lighthouse", "Labs"]); // => will always fail!
 
 // module.exports = tail;
-module.exports = assertEqual;
+module.exports = tail;
