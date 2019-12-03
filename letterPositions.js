@@ -58,6 +58,8 @@ const letterPositions = function(sentence) {
   // console.log(characterObj);
 };
 
+module.exports = letterPositions;
+
 // console.log(letterPositions("hello"));
 let results1 = letterPositions("hello");
 // console.log(results1);

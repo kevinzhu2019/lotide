@@ -25,7 +25,7 @@ const tail = function(tailArray) {
   return tempArray;
 };
 
-console.log(tail(['Hello', 'Lighthouse', 'Labs', 'aaa', 'bbb']));
+// console.log(tail(['Hello', 'Lighthouse', 'Labs', 'aaa', 'bbb']));
 // const assertEqual = require('./assertEqual');
 
 // const tail = function(tailArray) {

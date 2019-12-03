@@ -28,6 +28,7 @@ const countLetters = function(takeInString) {
     // console.log(characterObj);
     return characterObj;
 };
+module.exports = countLetters;
 
 let result1 = countLetters("this is a test");
 

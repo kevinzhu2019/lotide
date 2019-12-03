@@ -32,6 +32,8 @@ const eqArrays = function(array1, array2) {
   }
 }
 
+module.exports = map;
+
 assertEqual(eqArrays(results1, ['g', 'c', 't', 'm', 't']), true);
 assertEqual(eqArrays(results1, ['g', 'c', 't', 'm']), false);
 assertEqual(eqArrays(results1, [123, 'c', 't', 'm']), false);
